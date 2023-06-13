@@ -24,6 +24,8 @@ const MainFooter = () => {
     }
 
     if (pathName.includes("/signup")) return null
+    if (pathName.includes('/dashboard')) return null
+    if (pathName.includes('/dashboard/*')) return null
     return (
         <div className='bg-white   dark:bg-[#1e1e1e]'>
             <footer>
@@ -103,7 +105,7 @@ const MainFooter = () => {
                         <FaRegCopyright className='inline'/> 2023 PhotoSTAD | All Rights
 
                     </p>
-                    <div className='flex space-x-3 items-center justify-center text-[30px]'>
+                    <div className='flex space-x-3 items-center cursor-pointer justify-center text-[30px]'>
                         <FaFacebook/> <AiFillInstagram className={'text-4xl'}/> <FaTelegram/>
                     </div>
                 </div>

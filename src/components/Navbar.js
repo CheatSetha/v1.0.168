@@ -33,7 +33,8 @@ const MainNavBar = () => {
     }
     if (pathName.includes("/signup")) return null
     // end of disable in auth part
-
+    if (pathName.includes('/dashboard')) return null
+    if (pathName.includes('/dashboard/*')) return null
     return (
         <div className='bg-white dark:bg-[#1e1e1e] sticky top-0 z-50  '>
             <div className='navbar md:h-[80px] px-5 w-full xl:w-[1290px] mx-auto max-sm:px-5'>
@@ -63,18 +64,20 @@ const MainNavBar = () => {
                 <div className='navbar-center hidden lg:flex'>
                     <ul className='menu menu-horizontal px-1 dark:text-white'>
                         <li>
-                            <Link className={'hover:dark:text-black hover:dark:bg-gray-100'} href={"/ "}>Home</Link>
+                            <Link className={'hover:dark:text-black hover:dark:bg-gray-100 dark:focus:bg-white '}
+                                  href={"/ "}>Home</Link>
                         </li>
 
                         <li>
-                            <a className={'hover:dark:text-black hover:dark:bg-gray-100'}>Watermark</a>
+                            <a className={'hover:dark:text-black hover:dark:bg-gray-100 dark:focus:bg-white'}>Watermark</a>
                         </li>
 
                         <li>
-                            <a className={'hover:dark:text-black hover:dark:bg-gray-100'}>Certificate</a>
+                            <a className={'hover:dark:text-black hover:dark:bg-gray-100 dark:focus:bg-white'}>Certificate</a>
                         </li>
                         <li>
-                            <Link className={'hover:dark:text-black hover:dark:bg-gray-100'} href={"/aboutus"}>About
+                            <Link className={'hover:dark:text-black hover:dark:bg-gray-100 dark:focus:bg-white'}
+                                  href={"/aboutus"}>About
                                 Us</Link>
                         </li>
                     </ul>
@@ -103,7 +106,7 @@ const MainNavBar = () => {
                                     <a className='justify-between'>{session.user.name}</a>
                                 </li>
                                 <li className="dark:hover:bg-slate-400 rounded-sm">
-                                    <Link href={"/setting"}>Settings</Link>
+                                    <Link href={"/profile/setting"}>Settings</Link>
                                 </li>
                                 <li className={'dark:hover:bg-red-500 dark:hover:text-white'}>
                                     <button
@@ -157,7 +160,7 @@ const MainNavBar = () => {
                             </li>
                             {session ? (
                                 <li className={'dark:hover:text-white'}>
-                                    <Link className={'dark:hover:text-white'} href={'/setting'}>profile</Link>
+                                    <Link className={'dark:hover:text-white'} href={'/profile/setting'}>profile</Link>
                                 </li>
                             ) : (
                                 <>

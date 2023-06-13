@@ -23,7 +23,7 @@ const Page = () => {
                     <h1 className=' title-about-1 lg:text-[40px] text-2xl md:text-[30px] font-medium dark:text-white '>ABOUT</h1>
                     <h1 className='title-about-2 text-3xl lg:text-[80px] xl:my-10 md:text-[50px] font-black text-red-600'> PHOTOSTAD</h1>
                     {/* description */}
-                    <p className=' lg:text-[20px]  md:text-[16px] dark:text-white '>
+                    <p className=' lg:text-[20px] max-sm:line-clamp-3  text md:text-[16px] dark:text-white '>
                         With our easy-to-use watermark maker and certificate <br/>
                         generator, you can create professional-looking <br/>
                         watermarks and certificates in seconds. Enhance your <br/>
@@ -32,7 +32,7 @@ const Page = () => {
                 </div>
                 {/* image of about */}
                 <div
-                    className='w-[90%]  md:w-[45%] h-full md:flex items-center justify-center'>
+                    className='w-[90%] mx-auto  md:w-[45%] h-full md:flex items-center justify-center'>
                     <img src="/assets/image/about.png" alt="images not fonud"/>
                 </div>
             </div>
@@ -302,32 +302,27 @@ const Page = () => {
             </main>
 
             {/*/!* CONTACT US *!/*/}
-            <div className='mt-[200px]  md:w-[90%] mx-auto max-sm:m-3   '>
-                <div>
-                    <h1 className='text-center text-[36px] font-black dark:text-white'>CONTACT US</h1>
+            <div className='mt-[200px]  md:w-[90%] mx-auto max-sm:p-3   '>
 
-                    <form action=""
-                          className='mt-[23px] w-full mx-auto pt-[80px] md:w-[50%] justify-center '>
-                        <div className="mb-6">
-                            <label for="email"
-                                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                            <input type="email" id="email"
-                                   className="block z-50 mb-6 w-full rounded-[16px]  p-4 text-gray-900 border border-gray-300  bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
-                        </div>
-                        <label for="message"
-                               className="block mb-2 z-50 text-sm font-medium text-gray-900 dark:text-white"> Message</label>
-                        <textarea id="message" rows="4"
-                                  className="block mb-6 p-2.5 w-full  rounded-[16px]  text-sm text-gray-900 bg-gray-50 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
-                        <button type="button"
-                                className="text-white z-50 mb-6 w-full mt-5 dark:text-white rounded-[16px]  bg-gray-800 hover:bg-gray-900 dark:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-300 text-[17px] font-medium px-5 py-2.5 mr-2   dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 "> Send <div
-                            className='inline-block ml-2 text-[24px]'><TbSend/></div></button>
-                    </form>
-                </div>
+                <h1 className='text-center text-[36px] font-black dark:text-white'>CONTACT US</h1>
 
+                <form action=""
+                      className='mt-[23px] w-full mx-auto pt-[80px] md:w-[50%] justify-center '>
+                    <div className="mb-6">
+                        <label htmlFor="email"
+                               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <input type="email" id="email"
+                               className="block z-50 mb-6 w-full rounded-[16px]  p-4 text-gray-900 border border-gray-300  bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
+                    </div>
+                    <label htmlFor="message"
+                           className="block mb-2 z-50 text-sm font-medium text-gray-900 dark:text-white"> Message</label>
+                    <textarea id="message" rows="4"
+                              className="block mb-6 p-2.5 w-full  rounded-[16px]  text-sm text-gray-900 bg-gray-50 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+                    <button type="button"
+                            className="text-white z-50 mb-6 w-full mt-5 dark:text-white rounded-[16px]  bg-gray-800 hover:bg-gray-900 dark:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-300 text-[17px] font-medium px-5 py-2.5 mr-2   dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 "> Send <div
+                        className='inline ml-2 text-[24px]'><TbSend className={'text-[24px] inline'}/></div></button>
+                </form>
             </div>
-            {/* barckground */}
-
-
         </div>
     )
 }

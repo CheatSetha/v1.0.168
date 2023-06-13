@@ -6,6 +6,7 @@ import {FcGoogle} from "react-icons/fc"
 import {signIn, useSession} from "next-auth/react"
 import {useRouter} from "next/navigation";
 
+
 const validationShcema = Yup.object({
     email: Yup.string().email("Invalid email address").required("Required"),
     password: Yup.string()
@@ -74,8 +75,10 @@ const Page = () => {
             className='bg-white  dark:bg-black w-full lg:w-[1290px] mx-auto flex flex-wrap items-center h-[100vh] '>
             <div className='w-1/2 hidden md:flex justify-center items-center'>
                 <img
-                    className='w-96 flex'
-                    src='./assets/image/signup.png'
+                    className='w-96 animate-bounce  flex'
+                    //
+                    // src={desinger}
+                    src={"./assets/image/Designer.gif"}
                     alt='sign up logo'
                 />
             </div>

@@ -18,8 +18,7 @@ export default function Page() {
                 {/* Page content here */}
                 <label htmlFor="my-drawer" className="drawer-button">
                     <h1 className="font-semibold dark:text-white text-[32px]"><IoIosArrowDropleft
-                        className={'inline'}/> Profile
-                        Management</h1>
+                        className={'inline'}/> Profile Setting</h1>
                 </label>
             </div>
             <SIdeSettingNav/>
@@ -28,7 +27,7 @@ export default function Page() {
 
 
         <h1 className="font-semibold max-sm:hidden dark:text-white text-[32px]">Profile
-            Management</h1>
+            Setting</h1>
         <h2 className="mt-5 font-light dark:text-white">Profile Information</h2>
         <section className="flex flex-wrap   mt-5">
             <div className={'max-sm:w-full'}>

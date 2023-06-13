@@ -35,8 +35,10 @@ const Page = () => {
             <div className='w-1/2 hidden md:flex justify-center items-center '>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                    className='w-96 flex  '
-                    src='./assets/image/signup.png'
+                    className='w-96  motion-safe:animate-bounce  flex'
+                    //
+                    // src={desinger}
+                    src={"./assets/image/Designer.gif"}
                     alt='sign up logo'
                 />
             </div>
