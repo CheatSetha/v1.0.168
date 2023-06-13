@@ -31,6 +31,9 @@ const MainNavBar = () => {
     if (pathName.includes("/login")) {
         return null
     }
+    if (pathName.includes("/dashboard")) {
+        return null
+    }
     if (pathName.includes("/signup")) return null
     // end of disable in auth part
 

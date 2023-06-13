@@ -23,6 +23,9 @@ const MainFooter = () => {
         return null
     }
 
+    if (pathName.includes("/dashboard")) {
+        return null
+    }
     if (pathName.includes("/signup")) return null
     return (
         <div className='bg-white   dark:bg-[#1e1e1e]'>
