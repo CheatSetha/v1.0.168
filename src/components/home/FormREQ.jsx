@@ -48,13 +48,13 @@ export default function FormREQ() {
         }
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="justify-center m-auto max-sm:w-fll md:w-[80%] ">
             <div className="mb-6">
                 <label
                     htmlFor="email"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                    Your email
+                    Email
                 </label>
                 <input
                     type="email"
@@ -68,14 +68,14 @@ export default function FormREQ() {
                     htmlFor="description"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                    Message
+                    Subject
                 </label>
                 <textarea
                     id="description"
-                    className="shadow-sm rounded-[16px] w-full lg:w-[800px] xl:w-[1069px] h-52 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                    className="shadow-sm rounded-[16px] w-full   h-52 bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-red-600 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                 />
             </div>
-            <div className="w-full flex justify-end lg:w-[800px] xl:w-[1069px]">
+            <div className="w-full flex justify-end">
                 <button
                     type="submit"
                     disabled={submitting}
