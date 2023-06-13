@@ -26,7 +26,7 @@ const MainNavBar = () => {
     // end of auth config
     const {theme, setTheme} = useTheme()
 
-    //diable in auth part
+    //disable in auth part
     const pathName = usePathname()
     if (pathName.includes("/login")) {
         return null
@@ -80,9 +80,9 @@ const MainNavBar = () => {
                     </ul>
                 </div>
                 <div className='navbar-end '>
-                    {/*<span className='mr-5'>*/}
-                    {/*	<ThemeSwitcher/>*/}
-                    {/*</span>*/}
+                    <span className='mr-5'>
+                    <ThemeSwitcher/>
+                    </span>
                     {session ? (
                         <div className='dropdown dropdown-end'>
                             <label
@@ -91,7 +91,8 @@ const MainNavBar = () => {
                             >
                                 <div
                                     className='md:w-10 md:h-10  w-7 h-7 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2'>
-                                    <img src={session.user.image}/>
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img src={session.user.image} alt={'profile picture'}/>
                                 </div>
                             </label>
                             <ul
@@ -104,12 +105,12 @@ const MainNavBar = () => {
                                 <li className="dark:hover:bg-slate-400 rounded-sm">
                                     <Link href={"/setting"}>Settings</Link>
                                 </li>
-                                <li>
+                                <li className={'dark:hover:bg-red-500 dark:hover:text-white'}>
                                     <button
                                         className='py-2 bg-red-400 '
                                         onClick={() => signOut()}
                                     >
-                                        sign out
+                                        Sign out
                                     </button>
                                 </li>
                             </ul>
@@ -141,30 +142,30 @@ const MainNavBar = () => {
                             tabIndex={0}
                             className='menu dark:text-white relative right-0 menu-sm dropdown-content space-y-3 mt-3 p-2 shadow bg-white dark:bg-slate-600 rounded-box w-52'
                         >
-                            <li>
-                                <Link href={'/'}>Home</Link>
+                            <li className={'dark:hover:text-white'}>
+                                <Link className={'dark:hover:text-white'} href={'/'}>Home</Link>
                             </li>
-                            <li>
-                                <a>Watermark</a>
+                            <li className={'dark:hover:text-white'}>
+                                <a className={'dark:hover:text-white'}>Watermark</a>
                             </li>
 
-                            <li>
-                                <a>Certificate</a>
+                            <li className={'dark:hover:text-white'}>
+                                <a className={'dark:hover:text-white'}>Certificate</a>
                             </li>
-                            <li>
-                                <Link href={'/aboutus'}>About Us</Link>
+                            <li className={'dark:hover:text-white'}>
+                                <Link className={'dark:hover:text-white'} href={'/aboutus'}>About Us</Link>
                             </li>
                             {session ? (
-                                <li>
-                                    <a>profile</a>
+                                <li className={'dark:hover:text-white'}>
+                                    <Link className={'dark:hover:text-white'} href={'/setting'}>profile</Link>
                                 </li>
                             ) : (
                                 <>
                                     <li>
-                                        <Link href={'/login'}>log in</Link>
+                                        <Link className={'dark:hover:text-white'} href={'/login'}>log in</Link>
                                     </li>
-                                    <li>
-                                        <Link href={'/signup'}>Sign up</Link>
+                                    <li className={'dark:hover:text-white'}>
+                                        <Link className={'dark:hover:text-white'} href={'/signup'}>Sign up</Link>
                                     </li>
                                 </>
                             )}

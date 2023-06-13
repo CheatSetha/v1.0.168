@@ -70,7 +70,8 @@ const Page = () => {
     }
 
     return (
-        <div className='bg-white dark:bg-slate-800 w-full lg:w-[1290px] mx-auto flex flex-wrap items-center h-[100vh] '>
+        <div
+            className='bg-white  dark:bg-black w-full lg:w-[1290px] mx-auto flex flex-wrap items-center h-[100vh] '>
             <div className='w-1/2 hidden md:flex justify-center items-center'>
                 <img
                     className='w-96 flex'

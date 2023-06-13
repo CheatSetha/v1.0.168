@@ -97,13 +97,13 @@ const MainFooter = () => {
                 {" "}
                 <hr/>
                 <div
-                    className='flex flex-wrap justify-center py-4   md:justify-between w-[90%] xl:w-[1290px] mx-auto mt-1 dark:text-white font-bold'>
-                    <p>
+                    className='flex flex-wrap justify-center  lg:justify-between py-4  max-md:flex-col w-[90%] xl:w-[1290px] mx-auto mt-1 dark:text-white font-bold'>
+                    <p className={'text-[12px] max-md:mb-3 max-md:text-center md:text-xl'}>
                         {" "}
-                        <FaRegCopyright className='inline'/> 2023 PhotSTAD | All Rights
-                        Reserved
+                        <FaRegCopyright className='inline'/> 2023 PhotoSTAD | All Rights
+
                     </p>
-                    <div className='flex space-x-3 items-center text-[30px]'>
+                    <div className='flex space-x-3 items-center justify-center text-[30px]'>
                         <FaFacebook/> <AiFillInstagram className={'text-4xl'}/> <FaTelegram/>
                     </div>
                 </div>
