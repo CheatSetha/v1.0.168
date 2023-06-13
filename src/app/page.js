@@ -15,6 +15,9 @@ const imagecertificate = "/assets/image/home/certificate-photo.png"
 const darkBACKGROUND = " dark:bg-slate-950 "
 const lightBackground = " bg-white "
 
+//padding section
+const paddingSection = " pb-20 "
+
 
  
 let descriptionTutorials_two ="	Start by designing a certificate template that includes relevant information such as the recipient name, the title of the certificate, the issuing organization name and logo, a description of the achievement, and any additional details you want to include. This template can be created using graphic design software or online certificate design tools."
@@ -28,6 +31,11 @@ const toggleText = () => {
 const toggleText_one = () => {
 	setShowMore_one(!showMore_one);
   };
+    const [isExpanded, setIsExpanded] = useState(false);
+  
+    const handleToggle = () => {
+      setIsExpanded(!isExpanded);
+    };
 	return (
 		<main
 			className={
@@ -36,16 +44,17 @@ const toggleText_one = () => {
 		>
 			<section
 				className={
+					paddingSection +
 					lightBackground +
 					darkBACKGROUND +
-					"xl:w-[1290px] flex  justify-between  pb-16 pt-14 max-sm:px-5 max-sm:pt-7 md:px-5 max-md:px-5"
+					"xl:w-[1290px] flex  justify-between pt-14 max-sm:px-5 max-sm:pt-7 md:px-5 max-md:px-5"
 				}
 			>
-				<div className='pt-16 ps-5 max-sm:pt-0'>
-					<h3 className='font-bold leading-relaxed tracking-wider  text-[#222] dark:text-[#ffff] pb-5 max-sm:text-[8px] max-sm:pb-5'>
+				<div className='pt-16 ps-5 max-sm:pt-4'>
+					<h3 className='font-bold leading-relaxed tracking-wider  text-[#222] dark:text-[#ffff] pb-5 max-sm:hidden max-sm:pb-5'>
 						GET YOUR DESIGNS NOW
 					</h3>
-					<h1 className='pb-5 font-extrabold text-5xl leading-11 text-[#222] dark:text-[#ffff] max-sm:text-[20px]  max-sm:pb-5 max-md:text-[30px] md:text-[40px] '>
+					<h1 className='pb-5 font-extrabold text-5xl leading-11 text-[#222] dark:text-[#ffff] max-sm:text-[20px]  max-sm:py-5 max-md:text-[30px] md:text-[40px] '>
 						Better Solution For Your Designs Watermark And Generate Certificate
 					</h1>
 					<p className='pb-5 text-[#222] dark:text-[#fff] max-sm:hidden max-md:hidden'>
@@ -68,11 +77,14 @@ const toggleText_one = () => {
 			</section>
 			<section
 				class={
-					lightBackground + darkBACKGROUND + "xl:w-[1290px] w-full  max-sm:px-5 px-5 "
+					paddingSection +
+					lightBackground + 
+					darkBACKGROUND + 
+					"xl:w-[1290px] w-full  max-sm:px-5 px-5  "
 				}
 			>
 				<div className=' max-sm:p-0'>
-					<h1 className='text-center pb-14 text-5xl font-bold dark:text-slate-300 text-slate-950 max-sm:text-[24px] max-sm:pb-[40px]'>
+					<h1 className='text-center pb-14 text-5xl font-bold dark:text-slate-300 text-slate-950 max-sm:text-[24px]'>
 						Our Service
 					</h1>
 					<div className='flex flex-wrap  max-sm:flex-col justify-between'>
@@ -135,15 +147,16 @@ const toggleText_one = () => {
 			</section>
 			<section
 				class={
+					paddingSection +
 					lightBackground +
 					darkBACKGROUND +
-					"xl:w-[1290px] mt-20   max-sm:px-5 sm:mt-0 lg:mt-[128px] px-5"
+					"xl:w-[1290px] max-sm:px-5 sm:mt-0 px-5"
 				}
 			>
-				<h1 className='text-center pb-14 text-5xl font-bold  text-slate-950 dark:text-[#fff] max-sm:text-[24px] max-sm:pb-[40px]'>
+				<h1 className='text-center pb-14 text-5xl font-bold  text-slate-950 dark:text-[#fff] max-sm:text-[24px] '>
 					Tutorials
 				</h1>
-				<div className='flex gap-5  justify-between pb-7 max-sm:flex-col'>
+				<div className='flex gap-5  justify-between pb-[20px] max-sm:flex-col'>
 					<div className='lg:w-1/2 w-[90%]  max-sm:w-full max-sm:h-[200px]'>
 						<iframe
 							className='rounded-[26px] max-sm:mb-[18px]'
@@ -214,87 +227,138 @@ const toggleText_one = () => {
 					</div>
 				</div>
 			</section>
-			<section className={lightBackground + darkBACKGROUND + "xl:w-[1290px] mt-20 lg:mt-32 "}>
+			<section className={
+				paddingSection +
+				lightBackground + 
+				darkBACKGROUND + 
+				"xl:w-[1290px] "}>
 				<h1 className='text-center pb-14 text-5xl font-bold text-[24px] dark:text-slate-300 text-slate-950'>
 					FAQ
 				</h1>
-				<div className='w-[90%] space-y-5 mx-auto'>
+				<div className='w-[90%] space-y-5 mx-auto '>
+                  <div
+                    tabIndex={0}
+                    className={'collapse w-fullmb-3 collapse-arrow'}
+                    >
+                    <div
+                        className={lightBackground + darkBACKGROUND + " collapse-title   font-medium"}
+                    >
+				 
+							 <p className= " text-[#222] dark:text-[#fff] max-sm:text-[12px]">
+                             CAN I USE MY OWN CUSTOM IMAGE OR LOGO AS A WATERMARK ?
+                        </p>
+						 
+                    
+                    </div>
+              
+                        <div className={lightBackground + darkBACKGROUND + 'collapse-content'}>
+                        <p className="text-[#222] dark:text-[#fff] max-sm:text-[12px] bg-[#F6F6F6] dark:bg-slate-950 rounded-[10px] p-3">
+                            Yes, You can upload and use your own custom image or logo as a watermark on our website.
+                        </p>
+                        </div>
+              
+                    </div>
+
 					<div
-						tabIndex={0}
-						className={ 'collapse w-full mb-3 collapse-arrow  '}
-		            >
-						<div className={lightBackground+ darkBACKGROUND +" collapse-title  font-medium "}>
-							<p className="text-[#222] dark:text-[#fff]">CAN I USE MY OWN CUSTOM IMAGE OR LOGO AS A WATERMARK ?</p>
-						</div>
-						<div className={lightBackground+ darkBACKGROUND+ 'collapse-content'}>
-							<p className="text-[#222] dark:text-[#fff]">
-								Yes, You can upload and use your own custom image or logo as a
-								watermark on our website.
-							</p>
-						</div>
-					</div>
+                    tabIndex={0}
+                    className={'collapse w-fullmb-3 collapse-arrow'}
+                    >
+                    <div
+                        className={lightBackground + darkBACKGROUND + " collapse-title   font-medium"}
+                    >
+				 
+							 <p className= " text-[#222] dark:text-[#fff] max-sm:text-[12px]">
+                             CAN I USE MY OWN CUSTOM IMAGE OR LOGO AS A WATERMARK ?
+                        </p>
+						 
+                    
+                    </div>
+              
+                        <div className={lightBackground + darkBACKGROUND + 'collapse-content'}>
+                        <p className="text-[#222] dark:text-[#fff] max-sm:text-[12px] bg-[#F6F6F6] dark:bg-slate-950 rounded-[10px] p-3">
+                            Yes, You can upload and use your own custom image or logo as a watermark on our website.
+                        </p>
+                        </div>
+              
+                    </div>
+
+
 					<div
-						tabIndex={0}
-						className={ 'collapse w-full mb-3 collapse-arrow  '}
-		            >
-						<div className={lightBackground+ darkBACKGROUND +" collapse-title  font-medium "}>
-							<p className="text-[#222] dark:text-[#fff]">CAN I USE MY OWN CUSTOM IMAGE OR LOGO AS A WATERMARK ?</p>
-						</div>
-						<div className={lightBackground+ darkBACKGROUND+ 'collapse-content'}>
-							<p className="text-[#222] dark:text-[#fff]">
-								Yes, You can upload and use your own custom image or logo as a
-								watermark on our website.
-							</p>
-						</div>
-					</div>
+                    tabIndex={0}
+                    className={'collapse w-fullmb-3 collapse-arrow'}
+                    >
+                    <div
+                        className={lightBackground + darkBACKGROUND + " collapse-title   font-medium"}
+                    >
+				 
+							 <p className= " text-[#222] dark:text-[#fff] max-sm:text-[12px]">
+                             CAN I USE MY OWN CUSTOM IMAGE OR LOGO AS A WATERMARK ?
+                        </p>
+						 
+                    
+                    </div>
+              
+                        <div className={lightBackground + darkBACKGROUND + 'collapse-content'}>
+                        <p className="text-[#222] dark:text-[#fff] max-sm:text-[12px] bg-[#F6F6F6] dark:bg-slate-950 rounded-[10px] p-3">
+                            Yes, You can upload and use your own custom image or logo as a watermark on our website.
+                        </p>
+                        </div>
+              
+                    </div>
+
 					<div
-						tabIndex={0}
-						className={ 'collapse w-full mb-3 collapse-arrow  '}
-		            >
-						<div className={lightBackground+ darkBACKGROUND +" collapse-title  font-medium "}>
-							<p className="text-[#222] dark:text-[#fff]">CAN I USE MY OWN CUSTOM IMAGE OR LOGO AS A WATERMARK ?</p>
-						</div>
-						<div className={lightBackground+ darkBACKGROUND+ 'collapse-content'}>
-							<p className="text-[#222] dark:text-[#fff]">
-								Yes, You can upload and use your own custom image or logo as a
-								watermark on our website.
-							</p>
-						</div>
-					</div>
+                    tabIndex={0}
+                    className={'collapse w-fullmb-3 collapse-arrow'}
+                    >
+                    <div
+                        className={lightBackground + darkBACKGROUND + " collapse-title   font-medium"}
+                    >
+				 
+							 <p className= " text-[#222] dark:text-[#fff] max-sm:text-[12px]">
+                             CAN I USE MY OWN CUSTOM IMAGE OR LOGO AS A WATERMARK ?
+                        </p>
+						 
+                    
+                    </div>
+              
+                        <div className={lightBackground + darkBACKGROUND + 'collapse-content'}>
+                        <p className="text-[#222] dark:text-[#fff] max-sm:text-[12px] bg-[#F6F6F6] dark:bg-slate-950 rounded-[10px] p-3">
+                            Yes, You can upload and use your own custom image or logo as a watermark on our website.
+                        </p>
+                        </div>
+              
+                    </div>
+
 					<div
-						tabIndex={0}
-						className={ 'collapse w-full mb-3 collapse-arrow  '}
-		            >
-						<div className={lightBackground+ darkBACKGROUND +" collapse-title  font-medium "}>
-							<p className="text-[#222] dark:text-[#fff]">CAN I USE MY OWN CUSTOM IMAGE OR LOGO AS A WATERMARK ?</p>
-						</div>
-						<div className={lightBackground+ darkBACKGROUND+ 'collapse-content'}>
-							<p className="text-[#222] dark:text-[#fff]">
-								Yes, You can upload and use your own custom image or logo as a
-								watermark on our website.
-							</p>
-						</div>
-					</div>
-					<div
-						tabIndex={0}
-						className={ 'collapse w-full mb-3 collapse-arrow  '}
-		            >
-						<div className={lightBackground+ darkBACKGROUND +" collapse-title  font-medium "}>
-							<p className="text-[#222] dark:text-[#fff]">CAN I USE MY OWN CUSTOM IMAGE OR LOGO AS A WATERMARK ?</p>
-						</div>
-						<div className={lightBackground+ darkBACKGROUND+ 'collapse-content'}>
-							<p className="text-[#222] dark:text-[#fff]">
-								Yes, You can upload and use your own custom image or logo as a
-								watermark on our website.
-							</p>
-						</div>
-					</div>
+                    tabIndex={0}
+                    className={'collapse w-fullmb-3 collapse-arrow'}
+                    >
+                    <div
+                        className={lightBackground + darkBACKGROUND + " collapse-title   font-medium"}
+                    >
+				 
+							 <p className= " text-[#222] dark:text-[#fff] max-sm:text-[12px]">
+                             CAN I USE MY OWN CUSTOM IMAGE OR LOGO AS A WATERMARK ?
+                        </p>
+						 
+                    
+                    </div>
+              
+                        <div className={lightBackground + darkBACKGROUND + 'collapse-content'}>
+                        <p className="text-[#222] dark:text-[#fff] max-sm:text-[12px] bg-[#F6F6F6] dark:bg-slate-950 rounded-[10px] p-3">
+                            Yes, You can upload and use your own custom image or logo as a watermark on our website.
+                        </p>
+                        </div>
+              
+                    </div>
+
+				 
 		 
 				</div>
 			</section >
 				{/* tutuorial req */}
-				<section className="xl:w-[1290px]  w-full px-5 mt-20 lg:mt-[128px]">
-				<h1 className='text-center max-sm:text-[24px] py-7 text-5xl font-bold dark:text-slate-300 text-slate-950'>
+			<section className="xl:w-[1290px] w-full px-5  ">
+				<h1 className='text-center max-sm:text-[24px] pb-14  text-5xl font-bold dark:text-slate-300 text-slate-950'>
 					Tutorials Request
 				</h1>
 			    <FormREQ/>

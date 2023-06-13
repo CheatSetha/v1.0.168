@@ -16,7 +16,7 @@ export default function FaqItem() {
 				watermark ?
 			</div>
 			<div className='collapse-content bg-gray-50 dark:bg-slate-500 dark:text-white p-3 px-7 rounded-[16px]'>
-				<p className=''>
+				<p className=''>handleFlipIcon
 					Yes, You can upload and use your own custom image or logo as a
 					watermark on our website.
 				</p>
